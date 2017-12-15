@@ -9,5 +9,5 @@
 3、设置好模板路径和word生成路径，点击运行，生成word。
 
 
-
+![图片说明1](https://github.com/liuhuakun/BrushShots/blob/master/1.PNG)
 
