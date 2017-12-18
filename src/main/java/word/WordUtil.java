@@ -1,3 +1,5 @@
+package word;
+
 import org.apache.poi.POIXMLDocument;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.xwpf.usermodel.*;
@@ -107,7 +109,6 @@ public class WordUtil {
                                     run.setText(text, 0);
                                 }
                                 run.setText(text, 0);
-                                System.out.println(text);
                             }
                             else
                                 run.setText("", 0);
