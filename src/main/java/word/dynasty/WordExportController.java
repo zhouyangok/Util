@@ -5,7 +5,6 @@ import org.apache.poi.xwpf.model.XWPFHeaderFooterPolicy;
 import org.apache.poi.xwpf.usermodel.*;
 import org.apache.xmlbeans.XmlException;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
-import word.dynamicTwo.WordParam;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,8 +21,8 @@ import java.util.List;
  * @Date 2017-12-18 8:53
  */
 public class WordExportController {
-    
-      public static void main(String[] args) throws Exception {
+
+    public static void main(String[] args) throws Exception {
         List<FrontSpaceSeries> list = new ArrayList<>();
         FrontSpaceSeries frontSpaceSeries = new FrontSpaceSeries();
         frontSpaceSeries.setSeriesName("神舟系列");
@@ -31,27 +30,37 @@ public class WordExportController {
         frontSpaceSeries.setMeasureStatus("振前测量");
         frontSpaceSeries.setBenchmarkCmName("基准立方镜");
         frontSpaceSeries.setMeasureCmName("太阳立方镜");
+        frontSpaceSeries.setMeasureStatus("太阳立方镜");
         frontSpaceSeries.setMeasureModel("太阳立方镜");
         frontSpaceSeries.setMeasureProcessName("过程1");
         frontSpaceSeries.setMeasureOrder("1");
         frontSpaceSeries.setXx("1");
         frontSpaceSeries.setXy("2");
         frontSpaceSeries.setXz("3");
+        frontSpaceSeries.setYx("1");
+        frontSpaceSeries.setYy("2");
+        frontSpaceSeries.setYz("3");
+        frontSpaceSeries.setZx("1");
+        frontSpaceSeries.setZy("2");
+        frontSpaceSeries.setZz("3");
+        frontSpaceSeries.setX0("1");
+        frontSpaceSeries.setY0("2");
+        frontSpaceSeries.setZ0("3");
         list.add(frontSpaceSeries);
         list.add(frontSpaceSeries);
         list.add(frontSpaceSeries);
         list.add(frontSpaceSeries);
-          WordExportController.generate(list);
+        WordExportController.generate(list);
     }
-    
+
     public static void generate(List<FrontSpaceSeries> list) throws IOException, XmlException {
         XWPFDocument document = new XWPFDocument();
 
         String filePath = "D:\\generateWord\\";
-        String fileName = System.currentTimeMillis()+".docx";
+        String fileName = System.currentTimeMillis() + ".docx";
 
         //Write the Document in file system  
-        FileOutputStream out = new FileOutputStream(new File(filePath+fileName));
+        FileOutputStream out = new FileOutputStream(new File(filePath + fileName));
 
 
         //添加标题  
@@ -81,7 +90,7 @@ public class WordExportController {
         comTableWidth.setW(BigInteger.valueOf(9072));
 
         //设置实体对象
-       
+
         //表格第一行  
         XWPFTableRow comTableRowOne = ComTable.getRow(0);
         comTableRowOne.getCell(0).setText("系列");
@@ -123,14 +132,12 @@ public class WordExportController {
             comTableRowTwo.getCell(14).setText(list.get(i).getZx());
             comTableRowTwo.getCell(15).setText(list.get(i).getZy());
             comTableRowTwo.getCell(16).setText(list.get(i).getZz());
-            comTableRowTwo.getCell(14).setText(list.get(i).getX0());
-            comTableRowTwo.getCell(15).setText(list.get(i).getY0());
-            comTableRowTwo.getCell(16).setText(list.get(i).getZ0());
+            comTableRowTwo.getCell(17).setText(list.get(i).getX0());
+            comTableRowTwo.getCell(18).setText(list.get(i).getY0());
+            comTableRowTwo.getCell(19).setText(list.get(i).getZ0());
         }
 
 //        WordParam.mergeCellsVertically(ComTable,1,1,4);
-        
-        
 
 
         CTSectPr sectPr = document.getDocument().getBody().addNewSectPr();
@@ -162,10 +169,9 @@ public class WordExportController {
         parsFooter[0] = footerParagraph;
         policy.createFooter(XWPFHeaderFooterPolicy.DEFAULT, parsFooter);
 
-
         document.write(out);
         out.close();
         System.out.println("create_table document written success.");
     }
-    
+
 }
