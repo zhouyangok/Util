@@ -1,4 +1,4 @@
-package word;
+package word.imageWord;
 
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -19,36 +19,19 @@ import java.io.InputStream;
  * @Desciption:
  * @Date 2017-12-15 9:53
  */
-public class CustomXWPFDocument extends XWPFDocument {
-    public CustomXWPFDocument(InputStream in) throws IOException {
+public class IMGGenerate extends XWPFDocument {
+    public IMGGenerate(InputStream in) throws IOException {
         super(in);
     }
 
-    public CustomXWPFDocument() {
+    public IMGGenerate() {
         super();
     }
 
-    public CustomXWPFDocument(OPCPackage pkg) throws IOException {
+    public IMGGenerate(OPCPackage pkg) throws IOException {
         super(pkg);
     }
-
-  /*  public int addPicture(InputStream is, int format) throws IOException, InvalidFormatException {
-        int imageNumber = this.getNextPicNameNumber(format);
-        XWPFPictureData img = (XWPFPictureData)this.createRelationship(XWPFPictureData.RELATIONS[format], XWPFFactory.getInstance(), imageNumber, false);
-        OutputStream out = img.getPackagePart().getOutputStream();
-        IOUtils.copy(is, out);
-        out.close();
-        this.pictures.add(img);
-        return this.getAllPictures().size() - 1;
-    }
-
-    public int addPicture(byte[] pictureData, int format) throws InvalidFormatException {
-        try {
-            return this.addPicture((InputStream)(new ByteArrayInputStream(pictureData)), format);
-        } catch (IOException var4) {
-            throw new POIXMLException(var4);
-        }
-    }*/
+    
 
     /**
      * @param blipId

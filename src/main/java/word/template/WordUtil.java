@@ -1,13 +1,13 @@
-package word;
+package word.template;
 
 import org.apache.poi.POIXMLDocument;
 import org.apache.poi.openxml4j.opc.OPCPackage;
-import org.apache.poi.xwpf.usermodel.*;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -35,10 +35,11 @@ public class WordUtil {
 
                 //处理段落  
                 List<XWPFParagraph> paragraphList = doc.getParagraphs();
+               
                 processParagraphs(paragraphList, param, doc);
 
                 //处理表格  
-                Iterator<XWPFTable> it = doc.getTablesIterator();
+                /*Iterator<XWPFTable> it = doc.getTablesIterator();
                 while (it.hasNext()) {
                     XWPFTable table = it.next();
                     List<XWPFTableRow> rows = table.getRows();
@@ -49,7 +50,7 @@ public class WordUtil {
                             processParagraphs(paragraphListTable, param, doc);
                         }
                     }
-                }
+                }*/
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,7 +67,8 @@ public class WordUtil {
         if (paragraphList != null && paragraphList.size() > 0) {
             for (XWPFParagraph paragraph : paragraphList) {
                 List<XWPFRun> runs = paragraph.getRuns();
-
+                
+                
                 String text = "";
                 for (XWPFRun run : runs)
                     text += run.getText(0);

@@ -1,4 +1,4 @@
-package word;
+package word.template;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -78,7 +78,7 @@ public class TestPoi {
         param.put("${pic2}",header2);
         param.put("${pic3}",header3);
         
-        String originPath = "D:\\generateWord\\model\\model.docx";
+        String originPath = "D:\\generateWord\\model\\model2.docx";
         String finalPath = "D:\\generateWord\\";
         String fileName = UUID.randomUUID().toString()+".docx";
         generWord(param,originPath,finalPath,fileName);
