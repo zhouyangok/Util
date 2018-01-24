@@ -1,4 +1,4 @@
-package word.template;
+package Office.word.template;
 
 import org.apache.poi.POIXMLDocument;
 import org.apache.poi.openxml4j.opc.OPCPackage;
@@ -21,7 +21,7 @@ import java.util.Map;
 public class WordUtil {
 
     /**
-     * 根据指定的参数值、模板，生成 word 文档
+     * 根据指定的参数值、模板，生成 Office.word 文档
      *
      * @param param    需要替换的变量
      * @param template 模板

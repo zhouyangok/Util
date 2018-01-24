@@ -1,4 +1,4 @@
-package word.dynasty;
+package Office.word.dynasty;
 
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;

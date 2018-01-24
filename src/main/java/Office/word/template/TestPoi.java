@@ -1,4 +1,4 @@
-package word.template;
+package Office.word.template;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

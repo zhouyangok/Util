@@ -1,4 +1,4 @@
-package word.imageWord;
+package Office.word.template;
 
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -19,16 +19,16 @@ import java.io.InputStream;
  * @Desciption:
  * @Date 2017-12-15 9:53
  */
-public class IMGGenerate extends XWPFDocument {
-    public IMGGenerate(InputStream in) throws IOException {
+public class CustomXWPFDocument extends XWPFDocument {
+    public CustomXWPFDocument(InputStream in) throws IOException {
         super(in);
     }
 
-    public IMGGenerate() {
+    public CustomXWPFDocument() {
         super();
     }
 
-    public IMGGenerate(OPCPackage pkg) throws IOException {
+    public CustomXWPFDocument(OPCPackage pkg) throws IOException {
         super(pkg);
     }
     

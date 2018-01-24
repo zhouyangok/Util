@@ -1,7 +1,7 @@
-package word.dynamicTwo;
+package Office.word.dynamicTwo;
 
 
-import Excel.FrontSpaceSeries;
+import Office.word.Excel.FrontSpaceSeries;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
 

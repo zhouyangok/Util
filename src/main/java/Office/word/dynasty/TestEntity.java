@@ -1,4 +1,4 @@
-package word.dynasty;
+package Office.word.dynasty;
 
 /**
  * Created with IntelliJ IDEA.

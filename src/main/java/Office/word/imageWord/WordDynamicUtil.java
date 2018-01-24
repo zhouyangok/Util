@@ -1,10 +1,10 @@
-package word.imageWord;
+package Office.word.imageWord;
 
-import Excel.FrontSpaceSeries;
+import Office.word.Excel.FrontSpaceSeries;
 import org.apache.poi.xwpf.model.XWPFHeaderFooterPolicy;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
-import word.template.CustomXWPFDocument;
+import Office.word.template.CustomXWPFDocument;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -1,4 +1,4 @@
-package word.dynamicTwo;
+package Office.word.dynamicTwo;
 
 /**
  * Created with IntelliJ IDEA.

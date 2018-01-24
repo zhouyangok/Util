@@ -1,6 +1,6 @@
-package word.dynasty;
+package Office.word.dynasty;
 
-import Excel.FrontSpaceSeries;
+import Office.word.Excel.FrontSpaceSeries;
 import org.apache.poi.xwpf.model.XWPFHeaderFooterPolicy;
 import org.apache.poi.xwpf.usermodel.*;
 import org.apache.xmlbeans.XmlException;

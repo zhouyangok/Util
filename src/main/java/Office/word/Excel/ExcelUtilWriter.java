@@ -1,4 +1,4 @@
-package Excel;
+package Office.word.Excel;
 
 /**
  * Created with IntelliJ IDEA.
